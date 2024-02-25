@@ -14,12 +14,15 @@ Parameters:
   PortfolioBucketName:
     Type: String
     Description: The name of the S3 bucket to hold the portfolio files
-  # HostedZoneParameter:
-  #   Type: String
-  #   Description: The hosted zone for the Route53 records
-  # DomainNameParameter:
-  #   Type: String
-  #   Description: The domain name of the site
+  PortfolioHostedZoneParameter:
+    Type: String
+    Description: The hosted zone for the Route53 records
+  PortfolioDomainNameParameter:
+    Type: String
+    Description: The domain name of the site
+  PortfolioCertificateArn:
+    Type: String
+    Description: The ARN of the certificate for the site
 
 
 Resources:
@@ -50,6 +53,60 @@ Resources:
             Action: s3:GetObject
             Resource: !Sub arn:aws:s3:::${PortfolioBucket}/*
 
+  PortfoliouRoute53Record:
+    Type: "AWS::Route53::RecordSetGroup"
+    Properties:
+      HostedZoneId: !Ref PortfolioHostedZoneParameter
+      RecordSets:
+        - Name: !Ref PortfolioDomainNameParameter
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2
+            DNSName: !GetAtt PortfolioCloudFrontDistribution.DomainName
+
+  PortfolioCloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Comment: "CDN for portfolio-on-aws"
+        Origins: # Setup the origin for the distribution
+          - DomainName: !Select [2, !Split ["/", !GetAtt PortfolioBucket.WebsiteURL]] # The domain name of the S3 bucket website endpoint
+            Id: S3Origin
+            CustomOriginConfig:
+              HTTPPort: 80
+              HTTPSPort: 443
+              OriginProtocolPolicy: http-only # The origin protocol policy for the distribution, has to be http-only for S3 buckets
+        
+        Enabled: true # Enable the distribution
+        DefaultRootObject: index.html # Set the default root object
+        CustomErrorResponses: # Setup custom error responses
+          - ErrorCode: 404
+            ResponseCode: 200
+            ResponsePagePath: /404.html
+        DefaultCacheBehavior: # Setup the default cache behavior
+          AllowedMethods:
+            - DELETE
+            - GET
+            - HEAD
+            - OPTIONS
+            - PATCH
+            - POST
+            - PUT
+          TargetOriginId: S3Origin
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          DefaultTTL: 0 #TODO: change later
+          MinTTL: 0
+          MaxTTL: 0
+          ViewerProtocolPolicy: redirect-to-https
+
+        Aliases: # Setup the aliases for the distribution, i.e. the domain names that the distribution will respond to
+          - !Ref PortfolioDomainNameParameter
+        ViewerCertificate: # Setup the viewer certificate for the distribution, makes sure the site is served over HTTPS
+          AcmCertificateArn: !Ref PortfolioCertificateArn
+          SslSupportMethod: sni-only
 
   # HelloWorldFunction:
   #   Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction

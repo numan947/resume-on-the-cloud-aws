@@ -13,9 +13,12 @@ deploy-site:
 deploy-infra:
 	make build; \
 	aws-vault exec $$PORTFOLIO_USER --no-session -- \
-		sam deploy \
-			--parameter-overrides \
-				ParameterKey=PortfolioBucketName,ParameterValue=$$PORTFOLIO_S3_BUCKET
+	sam deploy \
+	--parameter-overrides \
+		ParameterKey=PortfolioBucketName,ParameterValue=$$PORTFOLIO_S3_BUCKET \
+		ParameterKey=PortfolioDomainNameParameter,ParameterValue=$$PORTFOLIO_DOMAIN_NAME \
+		ParameterKey=PortfolioHostedZoneParameter,ParameterValue=$$PORTFOLIO_HOSTED_ZONE_ID \
+		ParameterKey=PortfolioCertificateArn,ParameterValue=$$PORTFOLIO_CERTIFICATE_ARN \
 
 
 
