@@ -1,6 +1,15 @@
 import json
 import requests
 import boto3
+import os
+
+
+counter_table_name = 'portfolio-on-the-cloud-aws-counter-table'
+ip_table_name = 'portfolio-on-the-cloud-aws-ip-table'
+dynamodb = boto3.resource('dynamodb')
+counter_table = dynamodb.Table(counter_table_name)
+ip_table = dynamodb.Table(ip_table_name)
+
 
 def lambda_handler(event, context):
     """Sample pure Lambda function
@@ -31,6 +40,15 @@ def lambda_handler(event, context):
     #     print(e)
 
     #     raise e
+    
+    # counter_table_name = os.environ['COUNTER_TABLE_NAME']
+    # ip_table_name = os.environ['IP_TABLE_NAME']
+    
+    
+    
+    
+    
+    print("Hello World!!")
 
     return {
         "statusCode": 200,
@@ -41,5 +59,7 @@ def lambda_handler(event, context):
         },
         "body": json.dumps({
             "Message": "Hello World!",
+            "CounterTableName": f"{counter_table_name}",
+            "IpTableName": f"{ip_table_name}"
         }),
     }

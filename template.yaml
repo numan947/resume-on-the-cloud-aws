@@ -26,9 +26,11 @@ Parameters:
   CounterTableName:
     Type: String
     Description: The name of the DynamoDB table to hold the visitor counter
+    Default: "temp-counter-table"
   IpTableName:
     Type: String
     Description: The name of the DynamoDB table to hold the IP addresses of the visitors
+    Default: "temp-ip-table"
   ApiDomainNameParameter:
     Type: String
     Description: The subdomain of the API
@@ -173,6 +175,10 @@ Resources:
       CodeUri: update_counter/
       Handler: app.lambda_handler
       Runtime: python3.10
+      Environment:
+        Variables:
+          COUNTER_TABLE_NAME: !Ref CounterTableName
+          IP_TABLE_NAME: !Ref IpTableName
       Architectures:
         - x86_64
       Policies:
