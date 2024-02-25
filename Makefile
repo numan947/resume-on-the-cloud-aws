@@ -25,7 +25,7 @@ deploy-infra:
 
 
 invoke-update-counter:
-	sam build && aws-vault exec $$PORTFOLIO_USER --no-session -- sam local invoke UpdateCounterFunction
+	sam build && aws-vault exec $$PORTFOLIO_USER --no-session -- sam local invoke UpdateCounterFunction --event events/event.json
 
 # deploy-infra-init-only:
 # 	make build; \

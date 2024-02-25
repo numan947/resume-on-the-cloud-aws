@@ -148,7 +148,7 @@ Resources:
         - AttributeName: "IpAddress"
           KeyType: "HASH"
       TimeToLiveSpecification:
-        AttributeName: "TTL"
+        AttributeName: "ExpiresAt"
         Enabled: true
   
   
@@ -159,9 +159,9 @@ Resources:
       Name: portfolio-api
       StageName: prod
       Cors:
-        AllowMethods: "'POST,GET,OPTIONS'"
-        AllowOrigin: "'https://*.shasan.xyz'"
-        AllowHeaders: "'Content-Type'"
+        AllowMethods: "'GET, POST, OPTIONS'"
+        AllowOrigin: "'https://shasan.xyz, https://www.shasan.xyz'"
+        AllowHeaders: "'Content-Type, X-Amz-Date, Authorization, X-Api-Key, X-Amz-S'"
       Domain:
         DomainName:
           !Join ["", [!Ref ApiDomainNameParameter, !Ref PortfolioDomainNameParameter]]

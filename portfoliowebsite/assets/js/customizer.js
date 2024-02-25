@@ -5,12 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Fetch data from the API endpoint
 	if (imageElement && spanElement) {
-		fetch('https://cmp0ltkns5.execute-api.us-east-2.amazonaws.com/Prod/post',
+		fetch('https://api.shasan.xyz/counter',
 			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				}
+				method: 'POST'
 			}
 
 		)
@@ -39,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	function update(data) {
 		if (imageElement && spanElement) {
 			imageElement.style.display = "none";
-			spanElement.textContent = data['count'];
+			spanElement.textContent = data['CounterValue'];
 		} else {
 			console.error("Image element not found!");
 		}
