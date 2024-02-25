@@ -23,6 +23,19 @@ Parameters:
   PortfolioCertificateArn:
     Type: String
     Description: The ARN of the certificate for the site
+  CounterTableName:
+    Type: String
+    Description: The name of the DynamoDB table to hold the visitor counter
+  IpTableName:
+    Type: String
+    Description: The name of the DynamoDB table to hold the IP addresses of the visitors
+  ApiDomainNameParameter:
+    Type: String
+    Description: The subdomain of the API
+    Default: "api."
+  ApiCertificateArnParameter:
+    Type: String
+    Description: The ARN of the certificate for the API
 
 
 Resources:
@@ -53,7 +66,7 @@ Resources:
             Action: s3:GetObject
             Resource: !Sub arn:aws:s3:::${PortfolioBucket}/*
 
-  PortfoliouRoute53Record:
+  PortfolioRoute53Record:
     Type: "AWS::Route53::RecordSetGroup"
     Properties:
       HostedZoneId: !Ref PortfolioHostedZoneParameter
@@ -63,7 +76,7 @@ Resources:
           AliasTarget:
             HostedZoneId: Z2FDTNDATAQYW2
             DNSName: !GetAtt PortfolioCloudFrontDistribution.DomainName
-
+  
   PortfolioCloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -108,6 +121,72 @@ Resources:
           AcmCertificateArn: !Ref PortfolioCertificateArn
           SslSupportMethod: sni-only
 
+
+  CounterTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref CounterTableName
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: "PrimaryKey"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "PrimaryKey"
+          KeyType: "HASH"
+  
+  IpTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref IpTableName
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: "IpAddress"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "IpAddress"
+          KeyType: "HASH"
+      TimeToLiveSpecification:
+        AttributeName: "TTL"
+        Enabled: true
+  
+  
+  
+  PortfolioApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: portfolio-api
+      StageName: prod
+      Cors:
+        AllowMethods: "'POST,GET,OPTIONS'"
+        AllowOrigin: "'https://*.shasan.xyz'"
+        AllowHeaders: "'Content-Type'"
+      Domain:
+        DomainName:
+          !Join ["", [!Ref ApiDomainNameParameter, !Ref PortfolioDomainNameParameter]]
+        CertificateArn: !Ref ApiCertificateArnParameter
+        Route53:
+          HostedZoneId: !Ref PortfolioHostedZoneParameter
+  
+  UpdateCounterFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: update_counter/
+      Handler: app.lambda_handler
+      Runtime: python3.10
+      Architectures:
+        - x86_64
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref CounterTableName
+        - DynamoDBCrudPolicy:
+            TableName: !Ref IpTableName
+      Events:
+        UpdateCounter:
+          Type: Api
+          Properties:
+            RestApiId: !Ref PortfolioApi
+            Path: /counter
+            Method: POST      
   # HelloWorldFunction:
   #   Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
   #   Properties:

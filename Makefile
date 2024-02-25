@@ -19,8 +19,13 @@ deploy-infra:
 		ParameterKey=PortfolioDomainNameParameter,ParameterValue=$$PORTFOLIO_DOMAIN_NAME \
 		ParameterKey=PortfolioHostedZoneParameter,ParameterValue=$$PORTFOLIO_HOSTED_ZONE_ID \
 		ParameterKey=PortfolioCertificateArn,ParameterValue=$$PORTFOLIO_CERTIFICATE_ARN \
+		ParameterKey=CounterTableName,ParameterValue=$$PORTFOLIO_COUNTER_TABLE_NAME \
+		ParameterKey=IpTableName,ParameterValue=$$PORTFOLIO_IP_TABLE_NAME \
+		ParameterKey=ApiCertificateArnParameter,ParameterValue=$$PORTFOLIO_API_CERTIFICATE_ARN \
 
 
+invoke-update-counter:
+	sam build && aws-vault exec $$PORTFOLIO_USER --no-session -- sam local invoke UpdateCounterFunction
 
 # deploy-infra-init-only:
 # 	make build; \

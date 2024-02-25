@@ -1,7 +1,6 @@
 import json
-
-# import requests
-
+import requests
+import boto3
 
 def lambda_handler(event, context):
     """Sample pure Lambda function
@@ -35,8 +34,12 @@ def lambda_handler(event, context):
 
     return {
         "statusCode": 200,
+        'headers': {
+            'Access-Control-Allow-Headers': 'Content-Type',
+            'Access-Control-Allow-Origin': 'https://*.shasan.xyz',
+            'Access-Control-Allow-Methods': 'POST,GET,OPTIONS'
+        },
         "body": json.dumps({
-            "message": "hello world",
-            # "location": ip.text.replace("\n", "")
+            "Message": "Hello World!",
         }),
     }
