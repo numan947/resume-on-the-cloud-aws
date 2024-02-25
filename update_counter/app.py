@@ -73,7 +73,7 @@ def lambda_handler(event, context):
             ReturnValues='NONE'
         )
         
-        # Increment the counter
+        # Increment the counter atomically
         response = counter_table.update_item(
             Key={'PrimaryKey': VISITOR_COUNT_KEY},
             UpdateExpression='ADD CounterValue :inc',

@@ -44,6 +44,9 @@ Resources:
   PortfolioBucket:
     Type: AWS::S3::Bucket
     Properties:
+      BucketName: !Ref PortfolioBucketName
+      VersioningConfiguration:
+        Status: Enabled
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
       OwnershipControls:
@@ -52,7 +55,12 @@ Resources:
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: 404.html
-      BucketName: !Ref PortfolioBucketName
+      LifecycleConfiguration:
+        Rules:
+          - Id: DeleteOldFiles
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 3
   
   PortfolioBucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -68,16 +76,22 @@ Resources:
             Action: s3:GetObject
             Resource: !Sub arn:aws:s3:::${PortfolioBucket}/*
 
-  PortfolioRoute53Record:
+  PortfolioRoute53Records:
     Type: "AWS::Route53::RecordSetGroup"
     Properties:
       HostedZoneId: !Ref PortfolioHostedZoneParameter
       RecordSets:
-        - Name: !Ref PortfolioDomainNameParameter
+        - Name: !Sub ${PortfolioDomainNameParameter}
           Type: A
           AliasTarget:
             HostedZoneId: Z2FDTNDATAQYW2
             DNSName: !GetAtt PortfolioCloudFrontDistribution.DomainName
+        - Name: !Sub www.${PortfolioDomainNameParameter}
+          Type: A
+          AliasTarget:
+            HostedZoneId: Z2FDTNDATAQYW2
+            DNSName: !GetAtt PortfolioCloudFrontDistribution.DomainName
+
   
   PortfolioCloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
@@ -119,6 +133,7 @@ Resources:
 
         Aliases: # Setup the aliases for the distribution, i.e. the domain names that the distribution will respond to
           - !Ref PortfolioDomainNameParameter
+          - !Sub www.${PortfolioDomainNameParameter}
         ViewerCertificate: # Setup the viewer certificate for the distribution, makes sure the site is served over HTTPS
           AcmCertificateArn: !Ref PortfolioCertificateArn
           SslSupportMethod: sni-only
