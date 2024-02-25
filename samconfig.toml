@@ -17,6 +17,10 @@ lint = true
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
 resolve_s3 = true
+s3_prefix = "portfolio-on-aws"
+region = "us-east-2"
+parameter_overrides = "PortfolioBucketName=\"portfolio-on-the-cloud-aws\""
+image_repositories = []
 
 [default.package.parameters]
 resolve_s3 = true

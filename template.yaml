@@ -8,18 +8,33 @@ Description: >
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 5
     MemorySize: 128
+Parameters:
+  PortfolioBucketName:
+    Type: String
+    Description: The name of the S3 bucket to hold the portfolio files
+  # HostedZoneParameter:
+  #   Type: String
+  #   Description: The hosted zone for the Route53 records
+  # DomainNameParameter:
+  #   Type: String
+  #   Description: The domain name of the site
+
 
 Resources:
   PortfolioBucket:
     Type: AWS::S3::Bucket
     Properties:
-      AccessControl: PublicRead
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: ObjectWriter
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: 404.html
-      BucketName: portfolio-on-the-cloud-aws
+      BucketName: !Ref PortfolioBucketName
   
   PortfolioBucketPolicy:
     Type: AWS::S3::BucketPolicy
