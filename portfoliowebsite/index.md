@@ -4,7 +4,6 @@ title: S Mahmudul Hasan
 subtitle: Seeking full-time opportunities starting May 2024
 # cover-img: /assets/img/bgm.jpg
 ---
-
 <span style="font-size: 1.3rem;">Hey there! Thanks for dropping by.</span>
 
 <span style="font-size: 1.3rem;">I am S Mahmudul Hasan, on the verge of completing my **Master's in Computer Science** at **Syracuse University**. As a software engineer and data scientist, I possess a robust skill set in software engineering, data science, and machine learning.</span>
@@ -12,10 +11,24 @@ subtitle: Seeking full-time opportunities starting May 2024
 <span style="font-size: 1.3rem;">I'm passionate about exploring cutting-edge tech, especially in software. Beyond coding, I enjoy long road trips and firmly stand by coffee in the tea vs. coffee debate.</span>
 
 
-<!-- 
-FOLLOWING CODE GENERATES HTML LIST PAGES USING THE POSTS
+<div  id="bottomContent" class="d-flex flex-column justify-content-end align-items-center">
+    <button id="profileViewButton" type="button" class="btn btn-dark d-flex align-items-center justify-content-center rounded-pill" title="Total profile visits">
+        <i class="fa fa-eye mr-2"></i>
+        <img id="profileViewButtonLoadingImage" width="20px" src="/assets/img/loading.gif" class="mr-2">
+        <span class="badge badge-light centered-span" id="profileViewCount"></span>
+        <span id="hoverText" class="position-absolute start-0 bottom-100 bg-dark text-white px-2 py-1 rounded invisible">Hover Text</span>
+    </button>
+</div>
 
-<div class="posts-list">
+<style>
+  #profileViewButton:hover {
+      background-color: #343a40 !important;
+  }
+</style>
+
+<!-- FOLLOWING CODE GENERATES HTML LIST PAGES USING THE POSTS -->
+
+<!-- <div class="posts-list">
   {% for post in paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | relative_url }}">
