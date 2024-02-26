@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI/CD
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+    paths:
+      - 'template.yaml'
+      - 'samconfig.toml'
+      - 'update_counter/**'
+      - '!portfoliowebsite/**'
+
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deploy-updated-infrastructure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - uses: aws-actions/setup-sam@v2
+        with:
+          use-installer: true
+      - uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+      # Build inside Docker containers
+      - run: sam build --use-container
+      # Prevent prompts and failure when the stack is unchanged
+      - run: |
+          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset sam deploy \
+          --parameter-overrides \
+          ParameterKey=PortfolioBucketName,ParameterValue=${{secrets.PORTFOLIO_S3_BUCKET}} \
+          ParameterKey=PortfolioDomainNameParameter,ParameterValue=${{secrets.PORTFOLIO_DOMAIN_NAME}} \
+          ParameterKey=PortfolioHostedZoneParameter,ParameterValue=${{secrets.PORTFOLIO_HOSTED_ZONE_ID}} \
+          ParameterKey=PortfolioCertificateArn,ParameterValue=${{secrets.PORTFOLIO_CERTIFICATE_ARN}} \
+          ParameterKey=CounterTableName,ParameterValue=${{secrets.PORTFOLIO_COUNTER_TABLE_NAME}} \
+          ParameterKey=IpTableName,ParameterValue=${{secrets.PORTFOLIO_IP_TABLE_NAME}} \
+          ParameterKey=ApiCertificateArnParameter,ParameterValue=${{secrets.PORTFOLIO_API_CERTIFICATE_ARN}}
