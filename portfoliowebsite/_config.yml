@@ -27,7 +27,7 @@ navbar-links:
   Projects: "projects"
   # Research: "research"
   Contact: "contact"
-  Resume: "assets/static/HASAN_RESUME.pdf"
+  Resume: "assets/static/HASAN_RESUME_SWE.pdf"
   
   # Resources:
   #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
