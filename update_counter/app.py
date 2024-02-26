@@ -90,10 +90,10 @@ def lambda_handler(event, context):
     
     ## Fix the CORS issue
     origin = event['headers']['origin']
-    if origin in ['https://shasan.xyz', 'https://www.shasan.xyz']:
+    if origin in ['https://smhasan.me', 'https://www.smhasan.me']:
         retOrigin = origin
     else:
-        retOrigin = 'https://shasan.xyz'
+        retOrigin = 'https://smhasan.me'
     
     return {
         "statusCode": 200,

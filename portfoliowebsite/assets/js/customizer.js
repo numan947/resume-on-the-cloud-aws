@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Fetch data from the API endpoint
 	if (imageElement && spanElement) {
-		fetch('https://api.shasan.xyz/counter',
+		fetch('https://api.smhasan.me/counter',
 			{
 				method: 'POST'
 			}

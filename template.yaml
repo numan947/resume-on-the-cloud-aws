@@ -175,7 +175,7 @@ Resources:
       StageName: prod
       Cors:
         AllowMethods: "'GET, POST, OPTIONS'"
-        AllowOrigin: "'https://shasan.xyz, https://www.shasan.xyz'"
+        AllowOrigin: "'https://smhasan.me, https://www.smhasan.me'"
         AllowHeaders: "'Content-Type, X-Amz-Date, Authorization, X-Api-Key, X-Amz-S'"
       Domain:
         DomainName:
