@@ -126,9 +126,9 @@ Resources:
             QueryString: false
             Cookies:
               Forward: none
-          DefaultTTL: 0 #TODO: change later
+          DefaultTTL: 3600 #TODO: change later
           MinTTL: 0
-          MaxTTL: 0
+          MaxTTL: 86400
           ViewerProtocolPolicy: redirect-to-https
 
         Aliases: # Setup the aliases for the distribution, i.e. the domain names that the distribution will respond to
