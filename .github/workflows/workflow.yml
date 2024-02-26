@@ -62,6 +62,7 @@ jobs:
     - name: "Build Site"
       run: |
         cd portfoliowebsite/
+        bundle install
         bundle exec jekyll build
       env:
         JEKYLL_ENV: production
