@@ -67,49 +67,98 @@ subtitle:
         </ul>
     </li>
 </ul>
+## <span style="font-weight:normal">PocketPy | <a href="https://pocketpy.dev" target="_blank">pocketpy.dev</a></span>
+### <span style="color:#7f7f7f;font-weight:normal">Graduate Research Assistant | 09/2021 – 01/2024</span>
+
+<ul style="font-size:17px">
+<img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25">
+<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="25">
+  <li>Enhanced Python's “str.format” method to provide previously unavailable functionality, resulting in a 40% performance improvement.</li>
+  <li>Implemented an efficient “deque” data structure in C++ using a doubly linked list, leading to a 80% performance improvement.</li>
+</ul>
+
+## <span style="font-weight:normal">Eastern University, Dhaka, Bangladesh</span>
+### <span style="color:#7f7f7f;font-weight:normal">Lecturer | 02/2020 – 08/2021</span>
+<ul style="font-size: 17px;">
+    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="25">
+    <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25">
+
+  <li>
+    Developed detailed course outlines, calendars, lesson plans, tutorials, and schedules, ensuring comprehensive instruction.
+  </li>
+  <li>
+    Managed examination duties, dedicating approximately 5 hours per week to question preparation, test invigilation, and meticulous marking.
+  </li>
+  <li>
+    Provided valuable student consultation and advising services, maintaining regular office hours of 3 hours per week per course/section.
+  </li>
+  <li>
+    Supervised and guided numerous student projects, dissertations, theses, and co-curricular/extracurricular activities.
+  </li>
+  <li>
+    Mentored over 20 students for programming contests and organized intra-university programming contests to foster student engagement and skill development.
+  </li>
+  <li>
+    Successfully handled administrative tasks initiated by self or assigned by the Department, Faculty, or University.
+  </li>
+  <li>
+    <strong>Courses Taught:</strong>
+    <ul style="font-size: 17px;">
+      <li>Discrete Mathematics</li>
+      <li>Algorithms</li>
+      <li>Algorithms Sessional</li>
+      <li>Compilers</li>
+      <li>Compilers Sessional</li>
+    </ul>
+  </li>
+</ul>
 
 
-## Teaching  
-1. **Lecturer**, February, 2020 -- Current (on leave)  
-   Department of CSE, Eastern University, Dhaka, Bangladesh.  
-   **Courses Taught:**  
-      + Discrete Mathematics
-      + Algorithms
-      + Mathematics for Computer Science
-      + Algorithms Sessional
-      + Compilers
-      + Compilers Sessional
+## <span style="font-weight:normal">Canadian University of Bangladesh, Dhaka, Bangladesh</span>
+### <span style="color:#7f7f7f;font-weight:normal">Lecturer | 02/2019 – 09/2019</span>
+<ul style="font-size: 17px;">
+    <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" height="25"> 
+    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="25">
+    <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25">
+  <li>
+    Prepared comprehensive course outlines, course calendars, lesson plans, and tutorial schedules to facilitate effective learning for students.
+  </li>
+  <li>
+    Conducted both theoretical and practical classes, ensuring students received a well-rounded education.
+  </li>
+  <li>
+    Managed the entire examination process, from preparing questions and invigilating tests and exams to meticulously marking and grading scripts and assignments.
+  </li>
+  <li>
+    Provided guidance and supervision to students undertaking project work, internships, dissertations, or theses, fostering their academic growth and research skills.
+  </li>
+  <li>
+    Mentored and supervised students participating in co-curricular and extra-curricular activities, nurturing their holistic development.
+  </li>
+  <li>
+    Actively participated in University meetings, contributing insights and expertise as needed.
+  </li>
+  <li>
+    <strong>Courses Taught:</strong>
+    <ul style="font-size: 17px;">
+      <li>Compilers</li>
+      <li>Theory of Computation</li>
+      <li>Computer Networks</li>
+      <li>Mobile Application Development</li>
+      <li>Compilers Sessional</li>
+      <li>Computer Networks Sessional</li>
+      <li>Structured Programming Language Sessional</li>
+    </ul>
+  </li>
+</ul>
 
-2. **Lecturer**, February, 2019 -- December, 2019  
-   Department of CSE, Canadian University of Bangladesh, Dhaka, Bangladesh.  
-   **Courses Taught:**  
-      + Compilers  
-      + Theory of Computation
-      + Computer Networks
-      + Mobile Application Development
-      + Compilers Sessional
-      + Computer Networks Sessional
-      + Structured Programming Language Sessional
-
-<!--     
-3. **Private Tutor**, July, 2014 -- December, 2018  
-   **Courses Taught:**  
-      + Undergraduate C/C++
-      + Undergraduate Java 
-      + Undergraduate Android Development
-      + HSC Physics 
-      + HSC Chemistry
-      + HSC Mathematics
-      + SSC Physics
-      + SSC Chemistry
-      + SSC Mathematics
-      + SSC Higher Mathematics   -->
-
-## Internship  
-
-1. **R & D Intern**, April, 2018 -- July, 2018  
-   REVE Systems, Bangladesh.  
-   **Project:**  
-   Worked on development of a Bangla Text To Speech (TTS) system using existing TTS systems.
-   Specifically, our group worked on development of a system for accumulating phonemes for 
-   Bangla words. We also experimented with different types of Vocoder to generate speech.
+## <span style="font-weight:normal">REVE Systems, Dhaka, Bangladesh.</span>
+### <span style="color:#7f7f7f;font-weight:normal">SDE Intern | 04/2018 – 06/2018</span>
+<ul style="font-size: 17px">
+    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="25">
+    <li>Contributed to the development of a Bangla Text To Speech (TTS) system utilizing existing TTS technologies.</li>
+    <li>Focused on the accumulation of phonemes for Bangla words to enhance system accuracy and naturalness.</li>
+    <li>Conducted experiments with various Vocoders to generate speech with improved sound quality and articulation.</li>
+    <li>Developed a system for Bengali Speech-To-Text and Text-To-Speech data collection and labeling using Java.</li>
+    <li>Successfully annotated 2000+ data points seamlessly, facilitating the development and improvement of the TTS system.</li>
+</ul>
