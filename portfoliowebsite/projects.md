@@ -2,6 +2,7 @@
 layout: page
 title: Projects
 subtitle:
+full-width:
 ---
 <style>
    .btn-xs {
@@ -35,3 +36,33 @@ subtitle:
     <i class="fab fa-github mr-1"></i> GitHub
   </a>
 </div>
+
+
+<div class="container mt-5">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span style="font-weight:normal">Cloud Development Projects</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Software Projects</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Data and ML Projects</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <h2>Home Content</h2>
+      <p>This is the content of the Home tab.</p>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <h2>Profile Content</h2>
+      <p>This is the content of the Profile tab.</p>
+    </div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+      <h2>Contact Content</h2>
+      <p>This is the content of the Contact tab.</p>
+    </div>
+  </div>
+</div>
+
