@@ -14,7 +14,7 @@ full-width:
 </div>
 
 # <span style="font-family: Raleway;">Education</span>
-## <span style="font-weight:normal">Syracuse University Syracuse, New York, USA</span>
+## <span style="font-weight:normal">Syracuse University, Syracuse, New York, USA</span>
 ### <span style="color:#7f7f7f;font-weight:normal">Master of Science (M.S.) in Computer Science</span>  
 ####  <span style="color:#7f7f7f;font-weight:normal">August, 2021 --- May 2024 (GPA: 4.00/4.00)</span>
 
