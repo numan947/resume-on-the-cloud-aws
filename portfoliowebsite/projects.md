@@ -13,7 +13,7 @@ full-width:
 
 # <span style="font-weight:normal">Cloud Development Projects</span>
 
-### <span style="color:#7f7f7f;font-weight:normal;"><u>1. The Cloud Resume Challenge</u></span>
+### <span style="color:#7f7f7f;font-weight:normal;"><u>The Cloud Resume Challenge</u></span>
 <div style="margin-bottom:10px"> 
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="25"> 
 <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" height="25"> 
@@ -327,7 +327,7 @@ full-width:
 
 
 
-### <span style="color:#7f7f7f;font-weight:normal;"><u>1. Disease Outbreaks Data Mining</u></span>
+### <span style="color:#7f7f7f;font-weight:normal;"><u>Disease Outbreaks Data Mining</u></span>
 <div style="margin-bottom:10px"> 
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="25"> 
 <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" height="25">
@@ -355,7 +355,7 @@ full-width:
 
 
 
-### <span style="color:#7f7f7f;font-weight:normal;"><u>2. Single Shot MultiBox Detector in PyTorch</u></span>
+### <span style="color:#7f7f7f;font-weight:normal;"><u>Single Shot MultiBox Detector in PyTorch</u></span>
 <div style="margin-bottom:10px"> 
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="25"> 
 <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" height="25"> 
