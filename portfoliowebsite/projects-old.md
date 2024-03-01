@@ -4,25 +4,6 @@ title: Projects
 subtitle:
 ---
 
-
-## Ongoing Research Projects
-
-
-1. **Android-Wifi-Phase-2**  
-   ***Type: Android Systems / Android UX Design***  
-   **Description:**  
-   This is an ongoing research project on designing a better and more secure UX for connecting to Enterprise Wifi networks.
-
-2. **Context Sensitive Fuzzing**  
-   ***Type: Fuzzing / Software Testing***  
-   **Description:**  
-   This is an ongoing research project on design and implementation of a platform for performing context sensitive fuzzing.
-
-3. **IoT Platform Evaluator**  
-   ***Type: IoT / Evaluation***  
-   **Description:**  
-   This is an ongoing research project on design and implementation of a IoT platform evaluator software.
-
 ## Past Research Projects
 
 1. **Data Mining for Revealing Influential Socioeconomic Factors of Disease Outbreaks**  
