@@ -28,6 +28,7 @@ navbar-links:
   # Research: "research"
   Contact: "contact"
   Resume: "assets/static/HASAN_RESUME_SWE.pdf"
+  Blog: "blog"
   
   # Resources:
   #   - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
