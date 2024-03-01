@@ -13,7 +13,7 @@ full-width:
 
 # <span style="font-weight:normal">Cloud Development Projects</span>
 
-### <span style="color:#7f7f7f;font-weight:normal;"><u>The Cloud Resume Challenge</u></span>
+### <span style="color:#7f7f7f;font-weight:normal;"><u><a href="https://cloudresumechallenge.dev/" target="_blank">The Cloud Resume Challenge</a></u></span>
 <div style="margin-bottom:10px"> 
 <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="25"> 
 <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" height="25"> 
@@ -25,6 +25,7 @@ full-width:
 <li>Designed and implemented a serverless architecture utilizing AWS Lambda, API Gateway, S3, DynamoDB, and SAM Templates.</li>
 <li>Developed a dynamic and responsive web application using Jekyll to showcase professional experience, skills, and projects.</li>
 <li>Automated deployment processes with GitHub Actions for efficient and scalable infrastructure management.</li>
+<li>This portfolio is deployed as part of this project.</li>
 <div class="btn-group" role="group" aria-label="Buttons" style="margin-top: 1rem;">
   <!-- <a href="your_blog_post_url" class="btn btn-primary btn-xs rounded mr-2" role="button">
     <i class="far fa-newspaper mr-1"></i> Read Post
