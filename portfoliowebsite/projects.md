@@ -40,10 +40,51 @@ full-width:
 
 
 
-
-
-
 # <span style="font-weight:normal">Software Projects</span>
+
+<!-- ### <span style="color:#7f7f7f;font-weight:normal;"><u>GameScape: A simple React web front end for <a href="https://rawg.io">rawg.io</a></u></span>
+<div style="margin-bottom:10px"> 
+<img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" height="25">
+<img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25">
+</div>
+##### <span style="color:#264653;font-weight:normal;">Description:</span>
+<ul style="font-size:17px;">
+<li>Developed a dynamic web application using Angular framework to create a video streaming platform.</li>
+  <li>Integrated Firebase Authentication for secure user registration and login functionalities, and Firebase Storage and Firebase Realtime Database to manage video, metadata, user preferences, and video playback history, enabling efficient data storage and retrieval.</li>
+  <li>Utilized AngularFire library to streamline communication between the Angular application and Firebase services, enhancing development efficiency and code maintainability.</li>
+<div class="btn-group" role="group" aria-label="Buttons" style="margin-top: 1rem;">
+  <a href="https://clips-b6909.web.app/" target="_blank" class="btn btn-primary btn-xs rounded mr-2" role="button">
+    <i class="far fa-paper-plane"></i> Demo
+  </a>
+  <a href="https://github.com/numan947/LearnAngular--Clips" target="_blank" class="btn btn-dark btn-xs rounded" role="button">
+    <i class="fab fa-github mr-1"></i> GitHub
+  </a>
+</div>
+</ul> -->
+
+
+
+### <span style="color:#7f7f7f;font-weight:normal;"><u>Clips: Video Clip Sharing Platform</u></span>
+<div style="margin-bottom:10px"> 
+<img src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" height="25">
+<img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white" height="25">
+<img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" height="25">
+</div>
+##### <span style="color:#264653;font-weight:normal;">Description:</span>
+<ul style="font-size:17px;">
+<li>Developed a dynamic web application using Angular framework to create a video streaming platform.</li>
+  <li>Integrated Firebase Authentication for secure user registration and login functionalities, and Firebase Storage and Firebase Realtime Database to manage video, metadata, user preferences, and video playback history, enabling efficient data storage and retrieval.</li>
+  <li>Utilized AngularFire library to streamline communication between the Angular application and Firebase services, enhancing development efficiency and code maintainability.</li>
+<div class="btn-group" role="group" aria-label="Buttons" style="margin-top: 1rem;">
+  <a href="https://clips-b6909.web.app/" target="_blank" class="btn btn-primary btn-xs rounded mr-2" role="button">
+    <i class="far fa-paper-plane"></i> Demo
+  </a>
+  <a href="https://github.com/numan947/LearnAngular--Clips" target="_blank" class="btn btn-dark btn-xs rounded" role="button">
+    <i class="fab fa-github mr-1"></i> GitHub
+  </a>
+</div>
+</ul>
+
 
 ### <span style="color:#7f7f7f;font-weight:normal;"><u>Enhancing <a href="" target="_blank" style="color:blue">PockeyPy</a></u></span>
 <div style="margin-bottom:10px"> 
@@ -63,8 +104,6 @@ full-width:
   </a>
 </div>
 </ul>
-
-
 
 
 ### <span style="color:#7f7f7f;font-weight:normal;"><u>Extension of VetIoT</u></span>
@@ -121,6 +160,7 @@ full-width:
 <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" height="25"> 
 <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" height="25">
 <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25">
+<img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" height="25">
 </div>
 ##### <span style="color:#264653;font-weight:normal;">Description:</span>
 <ul style="font-size:17px;">
@@ -294,7 +334,7 @@ full-width:
 <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" height="25">
 <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" height="25">
 <img src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white" height="25">
-<img src="https://img.shields.io/badge/Matplotlib-%23afddd3.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" height="25">
+<img src="https://img.shields.io/badge/Matplotlib-%23afddd.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" height="25">
 </div>
 ##### <span style="color:#264653;font-weight:normal;">Description:</span>
 <ul style="font-size:17px">
