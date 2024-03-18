@@ -68,7 +68,7 @@ subtitle:
     </li>
 </ul>
 ## <span style="font-weight:normal">PocketPy | <a href="https://pocketpy.dev" target="_blank">pocketpy.dev</a></span>
-### <span style="color:#7f7f7f;font-weight:normal">Graduate Research Assistant | 09/2021 – 01/2024</span>
+### <span style="color:#7f7f7f;font-weight:normal">Open Source Contributor | 09/2023 – Present</span>
 
 <ul style="font-size:17px">
 <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" height="25">
